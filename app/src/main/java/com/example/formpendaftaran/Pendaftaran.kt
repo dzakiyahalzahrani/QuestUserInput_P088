@@ -77,5 +77,15 @@ fun FormPendaftaran(modifier: Modifier = Modifier) {
             )
         },
         modifier = modifier.fillMaxSize()
-    )
+    ){ paddingValues ->
+
+
+        Card(
+            modifier = Modifier
+                .padding(paddingValues)
+                .padding(horizontal = 16.dp, vertical = 8.dp) // Padding tambahan untuk Card
+                .fillMaxWidth(),
+            colors = CardDefaults.cardColors(containerColor = Color.White),
+            elevation = CardDefaults.cardElevation(defaultElevation = 8.dp)
+        )
 
