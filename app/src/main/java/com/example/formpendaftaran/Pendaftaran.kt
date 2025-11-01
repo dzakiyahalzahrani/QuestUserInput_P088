@@ -62,7 +62,8 @@ fun FormPendaftaran(modifier: Modifier = Modifier) {
 
     Scaffold(
         topBar = {
-            TopAppBar(modifier = Modifier.padding(top = 50.dp),
+            TopAppBar(
+                modifier = Modifier.padding(top = 50.dp),
                 title = {
                     Text(
                         text = "Formulir Pendaftaran",
@@ -77,7 +78,7 @@ fun FormPendaftaran(modifier: Modifier = Modifier) {
             )
         },
         modifier = modifier.fillMaxSize()
-    ){ paddingValues ->
+    ) { paddingValues ->
 
 
         Card(
@@ -87,7 +88,7 @@ fun FormPendaftaran(modifier: Modifier = Modifier) {
                 .fillMaxWidth(),
             colors = CardDefaults.cardColors(containerColor = Color.White),
             elevation = CardDefaults.cardElevation(defaultElevation = 8.dp)
-        ){
+        ) {
             Column(
                 modifier = Modifier
                     .padding(16.dp) // Padding di dalam Card
@@ -96,7 +97,11 @@ fun FormPendaftaran(modifier: Modifier = Modifier) {
             ) {
 
                 // --- NAMA LENGKAP ---
-                Text(text = "NAMA LENGKAP", fontWeight = FontWeight.SemiBold, modifier = Modifier.padding(top = 8.dp))
+                Text(
+                    text = "NAMA LENGKAP",
+                    fontWeight = FontWeight.SemiBold,
+                    modifier = Modifier.padding(top = 8.dp)
+                )
                 OutlinedTextField(
                     value = textNama,
                     singleLine = true,
@@ -108,14 +113,19 @@ fun FormPendaftaran(modifier: Modifier = Modifier) {
 
                 // --- JENIS KELAMIN ---
                 Text(text = "JENIS KELAMIN", fontWeight = FontWeight.SemiBold)
-                Column( modifier = Modifier.fillMaxWidth() ) {
+                Column(modifier = Modifier.fillMaxWidth()) {
                     genderOptions.forEach { item ->
-                        Row( modifier = Modifier
-                            .selectable( selected = selectedJK == item, onClick = { selectedJK = item } )
-                            .fillMaxWidth(),
+                        Row(
+                            modifier = Modifier
+                                .selectable(
+                                    selected = selectedJK == item,
+                                    onClick = { selectedJK = item })
+                                .fillMaxWidth(),
                             verticalAlignment = Alignment.CenterVertically
                         ) {
-                            RadioButton(selected = selectedJK == item, onClick = { selectedJK = item })
+                            RadioButton(
+                                selected = selectedJK == item,
+                                onClick = { selectedJK = item })
                             Text(item, style = MaterialTheme.typography.bodyLarge)
                         }
                     }
@@ -124,14 +134,19 @@ fun FormPendaftaran(modifier: Modifier = Modifier) {
 
                 // --- STATUS PERKAWINAN ---
                 Text(text = "STATUS PERKAWINAN", fontWeight = FontWeight.SemiBold)
-                Column( modifier = Modifier.fillMaxWidth() ) {
+                Column(modifier = Modifier.fillMaxWidth()) {
                     statusKawinOptions.forEach { item ->
-                        Row( modifier = Modifier
-                            .selectable( selected = selectedStatusKawin == item, onClick = { selectedStatusKawin = item } )
-                            .fillMaxWidth(),
+                        Row(
+                            modifier = Modifier
+                                .selectable(
+                                    selected = selectedStatusKawin == item,
+                                    onClick = { selectedStatusKawin = item })
+                                .fillMaxWidth(),
                             verticalAlignment = Alignment.CenterVertically
                         ) {
-                            RadioButton(selected = selectedStatusKawin == item, onClick = { selectedStatusKawin = item })
+                            RadioButton(
+                                selected = selectedStatusKawin == item,
+                                onClick = { selectedStatusKawin = item })
                             Text(item, style = MaterialTheme.typography.bodyLarge)
                         }
                     }
@@ -181,11 +196,9 @@ fun FormPendaftaran(modifier: Modifier = Modifier) {
                         Spacer(modifier = Modifier.height(10.dp))
                     }
                 }
+            }
+        }
 
 
-
-
-
-
-
-
+    }
+}
