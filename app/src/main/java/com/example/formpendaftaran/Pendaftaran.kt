@@ -104,5 +104,7 @@ fun FormPendaftaran(modifier: Modifier = Modifier) {
                     label = { Text(text = "Isian nama lengkap") },
                     onValueChange = { textNama = it }
                 )
+                Spacer(modifier = Modifier.height(20.dp))
+
 
 
