@@ -64,6 +64,18 @@ fun FormPendaftaran(modifier: Modifier = Modifier) {
         topBar = {
             TopAppBar(modifier = Modifier.padding(top = 50.dp),
                 title = {
-
+                    Text(
+                        text = "Formulir Pendaftaran",
+                        fontSize = 30.sp,
+                        color = Color.White,
+                        fontWeight = FontWeight.Bold
+                    )
+                },
+                colors = TopAppBarDefaults.topAppBarColors(
+                    containerColor = PurpleHeader
+                )
+            )
+        },
+        modifier = modifier.fillMaxSize()
     )
 
