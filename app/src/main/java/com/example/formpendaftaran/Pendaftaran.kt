@@ -149,6 +149,23 @@ fun FormPendaftaran(modifier: Modifier = Modifier) {
                 )
                 Spacer(modifier = Modifier.height(25.dp))
 
+                // --- Tombol Submit ---
+                Button(
+                    modifier = Modifier.fillMaxWidth().height(45.dp),
+                    colors = ButtonDefaults.buttonColors(containerColor = PurpleSubmit),
+                    enabled = textNama.isNotEmpty() && selectedJK.isNotEmpty() && selectedStatusKawin.isNotEmpty() && textAlamat.isNotEmpty(),
+                    onClick = {
+                        resultNama = textNama
+                        resultJK = selectedJK
+                        resultStatusKawin = selectedStatusKawin
+                        resultAlamat = textAlamat
+                    }
+                ) {
+                    Text("Submit")
+                }
+                Spacer(modifier = Modifier.height(20.dp))
+
+
 
 
 
