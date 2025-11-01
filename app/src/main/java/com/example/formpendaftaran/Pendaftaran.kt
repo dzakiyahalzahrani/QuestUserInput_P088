@@ -60,3 +60,10 @@ fun FormPendaftaran(modifier: Modifier = Modifier) {
     val genderOptions = listOf("Laki-laki", "Perempuan")
     val statusKawinOptions = listOf("Janda", "Lajang", "Duda")
 
+    Scaffold(
+        topBar = {
+            TopAppBar(modifier = Modifier.padding(top = 50.dp),
+                title = {
+
+    )
+
