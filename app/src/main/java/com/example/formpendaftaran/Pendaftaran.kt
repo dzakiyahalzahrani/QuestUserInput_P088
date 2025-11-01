@@ -165,6 +165,24 @@ fun FormPendaftaran(modifier: Modifier = Modifier) {
                 }
                 Spacer(modifier = Modifier.height(20.dp))
 
+                // --- Hasil Output (ElevatedCard) ---
+                if (resultNama.isNotEmpty()) {
+                    ElevatedCard(
+                        elevation = CardDefaults.cardElevation(defaultElevation = 5.dp),
+                        colors = CardDefaults.cardColors(containerColor = Color.Black),
+                        modifier = Modifier.fillMaxWidth()
+                    ) {
+                        Column(modifier = Modifier.padding(8.dp)) {
+                            Text(text = "Nama    : $resultNama", color = Color.White)
+                            Text(text = "Gender  : $resultJK", color = Color.White)
+                            Text(text = "Status  : $resultStatusKawin", color = Color.White)
+                            Text(text = "Alamat  : $resultAlamat", color = Color.White)
+                        }
+                        Spacer(modifier = Modifier.height(10.dp))
+                    }
+                }
+
+
 
 
 
