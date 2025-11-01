@@ -87,5 +87,11 @@ fun FormPendaftaran(modifier: Modifier = Modifier) {
                 .fillMaxWidth(),
             colors = CardDefaults.cardColors(containerColor = Color.White),
             elevation = CardDefaults.cardElevation(defaultElevation = 8.dp)
-        )
+        ){
+            Column(
+                modifier = Modifier
+                    .padding(16.dp) // Padding di dalam Card
+                    .verticalScroll(rememberScrollState()),
+                horizontalAlignment = Alignment.Start
+            )
 
