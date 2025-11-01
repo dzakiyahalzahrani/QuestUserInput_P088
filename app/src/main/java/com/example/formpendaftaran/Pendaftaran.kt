@@ -57,3 +57,6 @@ fun FormPendaftaran(modifier: Modifier = Modifier) {
     var resultStatusKawin by remember { mutableStateOf("") }
     var resultAlamat by remember { mutableStateOf("") }
 
+    val genderOptions = listOf("Laki-laki", "Perempuan")
+    val statusKawinOptions = listOf("Janda", "Lajang", "Duda")
+
