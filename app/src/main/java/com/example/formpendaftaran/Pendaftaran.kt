@@ -44,3 +44,10 @@ val PurpleHeader = Color(0xFFBB67F0)
 val PurpleSubmit = Color(0xFF673AB7)
 
 @OptIn(ExperimentalMaterial3Api::class) // Anotasi
+@Composable
+fun FormPendaftaran(modifier: Modifier = Modifier) {
+    // ... State dan Options ... (Kode ini tetap sama)
+    var textNama by remember { mutableStateOf("") }
+    var textAlamat by remember { mutableStateOf("") }
+    var selectedJK by remember { mutableStateOf("") }
+    var selectedStatusKawin by remember { mutableStateOf("") }
